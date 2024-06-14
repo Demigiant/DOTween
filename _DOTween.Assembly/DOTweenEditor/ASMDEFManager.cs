@@ -122,6 +122,9 @@ namespace DG.DOTweenEditor
                 if (!hasDOTweenTimelineASMDEF) CreateASMDEF(ASMDEFType.DOTweenTimeline);
                 if (!hasDOTweenTimelineEditorASMDEF) CreateASMDEF(ASMDEFType.DOTweenTimelineEditor);
             }
+
+            if (!EditorUtils.HasGlobalDefine(DOTweenDefines.GlobalDefine_DOTween_ASDMEF))
+                EditorUtils.AddGlobalDefine(DOTweenDefines.GlobalDefine_DOTween_ASDMEF);
         }
 
         public static void RemoveAllASMDEF()
@@ -134,6 +137,7 @@ namespace DG.DOTweenEditor
             if (hasProEditorASMDEF) RemoveASMDEF(ASMDEFType.DOTweenProEditor);
             if (hasDOTweenTimelineASMDEF) RemoveASMDEF(ASMDEFType.DOTweenTimeline);
             if (hasDOTweenTimelineEditorASMDEF) RemoveASMDEF(ASMDEFType.DOTweenTimelineEditor);
+            EditorUtils.RemoveGlobalDefine(DOTweenDefines.GlobalDefine_DOTween_ASDMEF);
         }
 
         #endregion
