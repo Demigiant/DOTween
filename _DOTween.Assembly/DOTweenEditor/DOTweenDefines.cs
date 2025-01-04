@@ -1,6 +1,6 @@
 ﻿// Author: Daniele Giardini - http://www.demigiant.com
 // Created: 2014/09/30 11:59
-// 
+//
 // License Copyright (c) Daniele Giardini.
 // This work is subject to the terms at http://dotween.demigiant.com/license.php
 
@@ -17,6 +17,7 @@ namespace DG.DOTweenEditor
     static class DOTweenDefines
     {
         public const string GlobalDefine_DOTween = "DOTWEEN";
+        public const string GlobalDefine_DOTween_ASDMEF = "DOTWEEN_ASMDEF";
         // Legacy (in versions older than 1.2.050)
         // Modules
         public const string GlobalDefine_Legacy_AudioModule = "DOTAUDIO";
@@ -34,6 +35,7 @@ namespace DG.DOTweenEditor
         public static void RemoveAllDefines()
         {
             EditorUtils.RemoveGlobalDefine(GlobalDefine_DOTween);
+            EditorUtils.RemoveGlobalDefine(GlobalDefine_DOTween_ASDMEF);
         }
 
         // Removes all legacy defines
